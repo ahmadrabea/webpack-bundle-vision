@@ -15,7 +15,7 @@ var FindDuplicateModules = /** @class */ (function () {
         var seen = new Set();
         var duplicates = new Set();
         modules.forEach(function (module) {
-            var id = (module.id &&  typeof module.id != "number" && module.id.trim()) || module.identifier;
+            var id = (module.id && module.id.trim()) || module.identifier;
             if (seen.has(id)) {
                 duplicates.add(id);
             }

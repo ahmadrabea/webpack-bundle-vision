@@ -73,7 +73,6 @@ var BundleVisionPlugin = /** @class */ (function () {
                         return [4 /*yield*/, this.processStats(stats.toJson())];
                     case 1:
                         _a.sent();
-                        console.log("outputPath", this.outputPath);
                         return [3 /*break*/, 3];
                     case 2:
                         error_1 = _a.sent();
@@ -130,9 +129,6 @@ var BundleVisionPlugin = /** @class */ (function () {
                 if (!fs.existsSync(path.join(this.outputPath, this.options.path || ""))) {
                     fs.mkdirSync(path.join(this.outputPath, this.options.path || ""), { recursive: true });
                 }
-                console.log("totalModulesSize", totalModulesSize);
-                console.log("totalAssetsSize", totalAssetsSize);
-                console.log("duplicateModules", duplicateModules);
                 fs.writeFileSync(filePath, JSON.stringify({
                     criticalPaths: topCriticalPaths,
                     circularDependencies: circularDependencies,
