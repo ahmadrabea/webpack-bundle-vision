@@ -1,0 +1,38 @@
+{
+  "name": "webpack-bundle-vision",
+  "version": "1.0.0",
+  "description": "A Webpack plugin to extract build metrics including critical paths , circular dependencies  , performance metrics, and more from the build stats.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "webpack",
+    "plugin",
+    "build metrics",
+    "performance",
+    "critical paths",
+    "circular dependencies",
+    "webpack plugin",
+    "bundle vision",
+    "analyze webpack build"
+  ],
+  "author": "Ahmad Abu Rabee",
+  "license": "MIT",
+  "dependencies": {
+    "filesize": "^10.1.2",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13",
+    "webpack": "^5.28.5"
+  },
+  "devDependencies": {
+    "@types/humanize-duration": "^3.27.4",
+    "@types/node": "^20.14.8",
+    "@types/webpack": "^5.28.5",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^4.5.2"
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["es6" , "DOM"],
+      "types": ["reflect-metadata" , "node"],
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strict": true,                           // Enable all strict type-checking options
+      "esModuleInterop": true,                  // Enable interoperation between CommonJS and ES Modules
+      "skipLibCheck": true,                     // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
+      "outDir": "./dist",                       // Redirect output structure to the dist directory
+      "rootDir": "./src",                       // Specify the root directory of input files
+      "baseUrl": "./",                           // Set the base URL for module resolution
+      "paths": {
+        "@interfaces": ["src/interfaces"],
+        "@services": ["src/services"],
+      },
+    },
+    "include": ["src/**/*"],                    // Include all .ts files in the src directory
+    "exclude": ["node_modules", "dist"]         // Exclude the node_modules and dist directories
+  }
+  

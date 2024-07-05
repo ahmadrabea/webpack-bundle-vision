@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("reflect-metadata");
+var inversify_1 = require("inversify");
+var types_1 = require("./types");
+var _services_1 = require("./services");
+var BundleVisionPlugin_1 = require("./BundleVisionPlugin");
+var container = new inversify_1.Container();
+container.bind(types_1.TYPES.IExtractPackages).to(_services_1.ExtractPackages);
+container.bind(types_1.TYPES.ITracePath).to(_services_1.TracePath);
+container.bind(types_1.TYPES.ICalculateSizes).to(_services_1.CalculateSizes);
+container.bind(types_1.TYPES.IFindDuplicateModules).to(_services_1.FindDuplicateModules);
+container.bind(types_1.TYPES.BundleVisionPlugin).to(BundleVisionPlugin_1.BundleVisionPlugin);
+exports.default = container;
